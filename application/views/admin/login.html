@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login WDM</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- Materialize icons -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<!-- Materialize CSS -->
+
+	<link rel="stylesheet" type="text/css" href="css/materialize.css">
+	<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+	<!-- Materialize JavaScript -->
+	<script src="js/materialize.js"></script>
+	<script src="js/materialize.min.js"></script>
+	<script src="js/scrool.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.sidenav')
+			.sidenav()
+			.on('click tap', 'li a', () => {
+				$('.sidenav').sidenav('close');
+			});
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.parallax').parallax();
+		});
+	</script>
+	<script>
+		$(window).scroll(function() {
+			if ($(document).scrollTop() > 100) {
+				$('.asu').addClass('asu2');
+			} else {
+				$('.asu').removeClass('asu2');
+			}
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tabs').tabs();
+		});
+	</script>
+	<script>
+		// CAROUSEL
+		$(document).ready(function(){
+			$('.carousel').carousel(
+			{
+			}
+			);
+		});
+
+		autoplay()   
+		function autoplay() {
+			$('.carousel').carousel('next');
+			setTimeout(autoplay, 4500);
+		}
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tabs-wrapper .row').pushpin({ top: $('.tabs-wrapper').offset().top });
+		});
+	</script>
+</head>
+<body style="background-color: #efebe9;">
+
+	<div class="section"></div>
+	<main>
+		<center>
+			<img class="responsive-img" style="width: 250px;" src="img/4.png" />
+			<div class="section"></div>
+			<div class="container">
+				<div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 32px 48px; border: 1px solid #EEE;">
+
+					<form class="col s12" method="post">
+						<div class='row'>
+							<div class='col s12'>
+								<h5 style="color: #558b2f;">Admin Login</h5>
+							</div>
+						</div>
+
+						<div class='row'>
+							<div class='input-field col s12'>
+								<input class='validate' type='email' name='email' id='email' />
+								<label for='email'>Username</label>
+							</div>
+						</div>
+
+						<div class='row'>
+							<div class='input-field col s12'>
+								<input class='validate' type='password' name='password' id='password' />
+								<label for='password'>Password</label>
+							</div>
+						</div>
+
+						<br />
+						<center>
+							<div class='row'>
+								<button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect ijo'>Login</button>
+							</div>
+						</center>
+					</form>
+				</div>
+			</div>
+		</center>
+
+		<div class="section"></div>
+	</main>
+
+	<!------------------------------------------------------------------------------------------------- /.footer -->
+
+</body>
+</html>
